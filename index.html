@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/99e5b02b3f.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/js/app.js" defer></script>
+    <title>Count Down</title>
+  </head>
+  <body class="d-grid">
+    <main class="d-grid">
+      <div class="container d-grid align-centre flow-content">
+        <h1 class="title__primary">Count down to a life altering event</h1>
+        <p class="event-date"></p>
+        <h2 class="title__secondary">
+          Approximately <span class="day"></span> days to go
+          <i class="fa-solid fa-shuttle-space" style="color: #808836"></i>
+        </h2>
+        <div class="wrapper d-grid">
+          <div class="day--counter d-grid">
+            <p>DAYS</p>
+            <h3 class="digits day"></h3>
+          </div>
+          <div class="timer d-flex">
+            <div class="time--counter d-grid">
+              <p>HOURS</p>
+              <h3 class="digits hour"></h3>
+            </div>
+            <div class="time--counter d-grid">
+              <p>MINUTES</p>
+              <h3 class="digits minute"></h3>
+            </div>
+            <div class="time--counter d-grid">
+              <p>SECONDS</p>
+              <h3 class="digits second"></h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
