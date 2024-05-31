@@ -5,12 +5,12 @@ const hourElement = document.querySelector('.hour');
 const minutesElement = document.querySelector('.minute');
 const secondsElement = document.querySelector('.second');
 
-//CONSTANT DATE OBJECT
+//DATE OBJECT
 const date = 'June 12, 2024 13:30:00'; //PROGRAM ASSUMED DATE
 const eventDate = new Date(date).toUTCString('en-US', {
   timeZone: 'Africa/Lagos',
 });
-const currentDate = new Date();
+let currentDate = new Date();
 const msecCurrentDate = Date.parse(currentDate);
 const msecEventDate = Date.parse(eventDate);
 const totalRunTime = (msecEventDate - msecCurrentDate) / 1000; //TOTAL TIME IN SECONDS BEFORE EVENT STARTS
@@ -27,7 +27,7 @@ minutesElement.innerHTML = startingMinutes;
 secondsElement.innerHTML = startingSeconds;
 daysElement.forEach((day) => (day.innerHTML = startingDay));
 
-function startCounter() {
+function startCountDown() {
   setInterval(() => {
     //SECONDS WATCH
     startingSeconds = startingSeconds - 1;
@@ -81,4 +81,15 @@ function startCounter() {
   }
 }
 
-startCounter();
+//SLEEP-WAKE SYNCHRONIZER
+setInterval(() => {
+  const firstLoadTime = currentDate.getTime();
+  const timeCheck = new Date().getTime();
+  console.log(firstLoadTime, timeCheck);
+  if (timeCheck > firstLoadTime + 15 * 1000) {
+    currentDate = new Date();
+    console.log(currentDate.getTime());
+  }
+}, 2000);
+
+startCountDown();
