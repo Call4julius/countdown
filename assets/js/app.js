@@ -85,10 +85,8 @@ function startCountDown() {
 setInterval(() => {
   const firstLoadTime = currentDate.getTime();
   const timeCheck = new Date().getTime();
-  console.log(firstLoadTime, timeCheck);
   if (timeCheck > firstLoadTime + 15 * 1000) {
     currentDate = new Date();
-    console.log(currentDate.getTime());
   }
 }, 2000);
 
