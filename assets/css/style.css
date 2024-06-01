@@ -88,10 +88,6 @@ ul[class] {
   display: flex;
 }
 
-.align-centre {
-  text-align: center;
-}
-
 .flow-content > * + * {
   margin-top: calc(var(--spacer-100) * 2);
 }
@@ -102,18 +98,19 @@ body {
   font-size: var(--fs-body);
   font-weight: var(--fw-400);
   color: var(--clr-primary);
+  text-align: center;
   background-color: var(--clr-bg);
   padding-block: calc(var(--spacer-100) * 5);
-  place-items: center;
+  place-content: center;
 }
 
-main {
-  place-items: center;
-  padding: var(--spacer-100);
+.container {
+  place-content: center;
+  margin-inline: var(--spacer-100);
 }
 
 .title__primary {
-  font-size: min(12.5vw, calc(var(--fs-body) * 3.5));
+  font-size: min(10vw, calc(var(--fs-body) * 3.5));
   font-weight: var(--fw-700);
   background-image: linear-gradient(var(--clr-primary), var(--clr-accent));
   background-clip: text;
@@ -121,7 +118,7 @@ main {
 }
 
 .title__secondary {
-  font-size: min(10vw, calc(var(--fs-body) * 2));
+  font-size: min(5vw, calc(var(--fs-body) * 2));
 
   span {
     font-family: var(--ff-secondary);
@@ -129,7 +126,7 @@ main {
     color: var(--clr-accent);
     display: inline-grid;
     place-content: center;
-    width: 50px;
+    width: min(8vw, 50px);
     aspect-ratio: 1;
     border: 2px solid currentColor;
     border-radius: 100%;
@@ -150,6 +147,9 @@ main {
 }
 
 .timer {
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
   gap: calc(var(--spacer-100) * 1.5);
 }
 
