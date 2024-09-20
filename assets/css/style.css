@@ -124,12 +124,12 @@ body {
     font-family: var(--ff-secondary);
     font-weight: var(--fw-700);
     color: var(--clr-accent);
-    display: inline-grid;
+    display: grid;
     place-content: center;
     width: min(8vw, 50px);
-    aspect-ratio: 1;
-    outline: 2px solid currentColor;
-    padding: 1rem;
+/*     aspect-ratio: 1; */
+    border: 2px solid currentColor;
+    padding: 0.25rem;
     border-radius: 100%;
   }
 }
