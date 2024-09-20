@@ -128,7 +128,8 @@ body {
     place-content: center;
     width: min(8vw, 50px);
     aspect-ratio: 1;
-    border: 2px solid currentColor;
+    outline: 2px solid currentColor;
+    padding: 0.5rem;
     border-radius: 100%;
   }
 }
