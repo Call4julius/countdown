@@ -6,7 +6,7 @@ const minutesElement = document.querySelector('.minute');
 const secondsElement = document.querySelector('.second');
 
 //DATE OBJECT
-const date = 'June 12, 2024 13:30:00'; //PROGRAM ASSUMED DATE
+const date = 'Januarye 1, 2025 13:30:00'; //PROGRAM ASSUMED DATE
 const eventDate = new Date(date).toUTCString('en-US', {
   timeZone: 'Africa/Lagos',
 });
