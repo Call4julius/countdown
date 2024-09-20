@@ -31,6 +31,7 @@ p {
 h1,
 h2,
 h3 {
+  text-wrap: balance;
   line-height: 1.1;
 }
 
